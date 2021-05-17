@@ -5,8 +5,8 @@ import { Main } from "../components/Main";
 
 export const Phones = () => {
   return (
-    <Main main="phones">
-      <Banner title="our phones" subtitle="">
+    <Main main="mainPhones">
+      <Banner title="our phones" subtitle="buy online !">
         <Link to="/" className="btn">return home</Link>
       </Banner>
     </Main>

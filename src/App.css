@@ -1,0 +1,142 @@
+body {
+  color: black;
+  background: #fff;
+  line-height: 1.4;
+}
+.btn{
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background:#FF003C ;
+  padding: 0.4rem 0.9rem;
+  border: 3px solid #FF003C ;
+  transition: .3s ease-in-out;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.btn:hover {
+  background: transparent;
+  color:#FF003C ;
+}
+/*Navbar*/
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+ /* padding: 0.75rem 2rem; */
+  background: #FF003C ;
+  z-index: 1;
+  color:#fff
+}
+.navbar-header {
+  display: flex;
+  justify-content: space-around;
+}
+.nav-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+}
+.nav-logo {
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+}
+.nav-links {
+  height: 0;
+  overflow: hidden;
+  transition: .3s ease-in-out;
+  list-style-type: none;
+}
+.nav-links a {
+  display: block;
+  text-decoration: none;
+  line-height: 4rem;
+  color: #fff;
+  transition: .3s ease-in-out;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.nav-links li:hover {
+background-color: #e50439;
+transition: .3s ease-in-out;
+}
+
+.show {
+  height: 125px;
+}
+@media screen and (min-width: 768px) {
+  .nav-btn {
+    display: none;
+  }
+  .navbar-inner {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+  }
+  .nav-links {
+    height: auto;
+    display: flex;
+    margin-left: 4rem;
+  }
+  .nav-links a {
+    margin: 0 1rem;
+  }
+}
+/* Main */
+.defaultMain,
+.mainPhones {
+ height: 700px;
+  background: url("./images/phones5.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mainPhones {
+  background-image: url("./images/phones2.jpg");
+ 
+}
+/* Banner */
+.banner {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.5);
+  color: black;
+  padding: 2rem 1rem;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+.banner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+.banner div {
+  width: 15rem;
+  height: 5px;
+  background: black;
+ /* margin: 1.7rem auto; */
+}
+.banner p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 576px) {
+  .banner {
+    padding: 2rem 6rem;
+  }
+  .banner h1 {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .banner {
+    padding: 2rem 10rem;
+  }
+  .banner h1 {
+    font-size: 4rem;
+  }
+}
