@@ -4,13 +4,16 @@ import "./index.css";
 import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { PhoneProvider } from "./Context";
 
 ReactDOM.render(
-  <Router>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </Router>,
+  <PhoneProvider>
+    <Router>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </Router>
+  </PhoneProvider>,
   document.getElementById("root")
 );
 
