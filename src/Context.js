@@ -6,11 +6,17 @@ const PhoneProvider = ({ children }) => {
   const [phones, setPhones] = useState([]);
   const [sortedPhones, setSortedPhones] = useState([]);
   const [details, setDetails] = useState([]);
-  //const [loading,setLoading]=useState(true);
+  const [loading,setLoading]=useState(true);
 
   useEffect(() => {
     let phones = formatData(items);
-    console.log(phones);
+    let featuredPhones = phones.filter(item=>
+      item.featured=== true
+    )
+    setDetails(featuredPhones)
+    setLoading(false);
+    setSortedPhones(phones)
+    console.log(featuredPhones);
   }, []);
   const formatData = () => {
     let _items = items.map((item) => {

@@ -79,7 +79,7 @@ export default [
       price: 429.99,
       memory: 128,
       operatingSystem:"IOS 13",
-      featured: false,
+      featured: true,
       description:"samsung galaxy A12 128GB red",
             images: [
         {
