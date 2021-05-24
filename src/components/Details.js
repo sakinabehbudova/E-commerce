@@ -1,18 +1,25 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Context } from '../Context'
+import Loading from './Loading';
 import Phone from './Phone';
 
-
-export default function Details({details}) {
-let contextType = Context;
-const {phones} = context;
-phones = phones.map(item=>{
-    return <Phone key={item.id}/>
-})
-console.log("test",phones)
-    return (
-        <>
-          <Phone/>
-        </>
-    )
+export default class Details extends Component {
+    static contextType = Context
+    render() {
+        let {sortedPhones:phones,loading} = this.context
+        console.log("sortedPhones",phones);
+        phones= phones.map(phone=>{
+            return <Phone key={phone.id} phone={phone}/>
+        })
+        return (
+            <>
+            <h1 className="title">Our Products</h1>
+            <div>
+                {loading ? <Loading/>:phones}
+            </div>
+          
+            </>
+        )
+    }
 }
+

@@ -85,7 +85,7 @@ export default [
         {
           fields: {
             file: {
-              url: phone1
+              url: phone4
             }
           }
         },

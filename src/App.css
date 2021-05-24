@@ -140,3 +140,15 @@ transition: .3s ease-in-out;
     font-size: 4rem;
   }
 }
+/*Loading*/
+.loading h3{
+  margin-top: 2rem;
+  text-transform: capitalize;
+  text-align: center;
+}
+.loading-gif{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}

@@ -6,19 +6,16 @@ const PhoneProvider = ({ children }) => {
   const [phones, setPhones] = useState([]);
   const [sortedPhones, setSortedPhones] = useState([]);
   const [details, setDetails] = useState([]);
-  const [loading,setLoading]=useState(true);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     let phones = formatData(items);
-    let featuredPhones = phones.filter(item=>
-      item.featured=== true
-    )
-    setDetails(featuredPhones)
+    let featuredPhones = phones.filter((item) => item.featured === true);
+    setSortedPhones(featuredPhones);
     setLoading(false);
-    setSortedPhones(phones)
-    console.log(featuredPhones);
+    console.log(phones);
   }, []);
-  const formatData = () => {
+  const formatData = (items) => {
     let _items = items.map((item) => {
       let id = item.sys.id;
       let images = item.fields.images.map((image) => image.fields.file.url);
@@ -27,7 +24,7 @@ const PhoneProvider = ({ children }) => {
     });
     return _items;
   };
-  return <Context.Provider value="test">{children}</Context.Provider>;
+  return <Context.Provider value={{ phones, sortedPhones}}>{children}</Context.Provider>;
 };
 const Consumer = Context.Consumer;
 export { Context, PhoneProvider, Consumer };
