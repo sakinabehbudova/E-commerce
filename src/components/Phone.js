@@ -14,6 +14,7 @@ export default function Phone({ phone }) {
             Details
           </Link>
         </div>
+        <div className="room-name">{name}</div>
       </div>
     </>
   );

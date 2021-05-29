@@ -13,8 +13,10 @@ const PhoneProvider = ({ children }) => {
     let featuredPhones = phones.filter((item) => item.featured === true);
     setSortedPhones(featuredPhones);
     setLoading(false);
-    console.log(phones);
+  //  console.log(phones);
+    getPhone();
   }, []);
+
   const formatData = (items) => {
     let _items = items.map((item) => {
       let id = item.sys.id;
@@ -24,7 +26,17 @@ const PhoneProvider = ({ children }) => {
     });
     return _items;
   };
-  return <Context.Provider value={{ phones, sortedPhones}}>{children}</Context.Provider>;
+  const getPhone = (slug) => {
+    let _items = phones;
+    //console.log("_items", _items);
+    const _item = _items.find((item) => item.slug === slug);
+    return _item;
+  };
+  return (
+    <Context.Provider value={{ phones, sortedPhones, getPhone}}>
+      {children}
+    </Context.Provider>
+  );
 };
 const Consumer = Context.Consumer;
 export { Context, PhoneProvider, Consumer };

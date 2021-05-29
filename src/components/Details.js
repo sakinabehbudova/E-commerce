@@ -7,7 +7,6 @@ export default class Details extends Component {
     static contextType = Context
     render() {
         let {sortedPhones:phones,loading} = this.context
-        console.log("sortedPhones",phones);
         phones= phones.map(phone=>{
             return <Phone key={phone.id} phone={phone}/>
         })
