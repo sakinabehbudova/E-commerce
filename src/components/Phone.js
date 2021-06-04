@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Phone({ phone }) {
-  console.log("phone", phone);
+  //console.log("phone", phone);
   const { name, slug, price, images } = phone;
   return (
     <>

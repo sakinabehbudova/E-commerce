@@ -73,7 +73,7 @@ export default [
       id: "3"
     },
     fields: {
-      name: "samsung galaxy A12 128GB red",
+      name: "samsung galaxy A12 ",
       slug: "samsung-galaxy-a12-128gb-red",
       type: "single",
       price: 429.99,

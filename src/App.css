@@ -18,6 +18,11 @@ body {
   background: transparent;
   color:#FF003C ;
 }
+.error {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 2rem 0;
+}
 /*Navbar*/
 .navbar {
   position: fixed;
@@ -90,7 +95,7 @@ transition: .3s ease-in-out;
 /* Main */
 .defaultMain,
 .mainPhones {
- height: 725px;
+  height: 725px;
   background: url("./images/phones5.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
