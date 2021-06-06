@@ -33,7 +33,7 @@ export default class Product extends Component {
       <StyledComponent image={images[0]}>
     
       </StyledComponent>
-      
+ 
       <Link className="btn" to="/phones">all Products</Link>
 
       </>

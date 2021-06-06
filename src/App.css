@@ -157,3 +157,82 @@ transition: .3s ease-in-out;
   margin-right: auto;
   
 }
+/*Details Page*/
+.title{
+ display: flex;
+ justify-content: center;
+ margin-top: 3rem;
+ margin-bottom: 2rem;
+}
+/*Phone Page*/
+.phone{
+  object-fit: cover;
+  width: 100%;
+  border:.5px solid rgba(0,0,0,.08);
+  display: flex;
+  justify-content: center;
+  transition:.3s ease-in-out;
+  margin-bottom: 4rem;
+  padding-bottom: 2rem;
+}
+.phone:hover{
+  box-shadow: 2px 3.5px 24px 0 rgb(18 16 11 / 31%);
+  cursor: pointer;
+}
+.phone a{
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #000;
+}
+.phone-image{
+  object-fit: cover;
+  height: 250px;
+  margin-top: 2rem;
+}
+.phone-name{
+  min-height: 25px;
+  position: relative;
+  margin: 20px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.phone-details{
+  display: flex;
+  justify-content: space-between;
+}
+.phone .price{
+  line-height: 38px;
+  font-weight: 600;
+  font-size: 16px;
+}
+.phone .btn{
+  color: #fff;
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 576px) {
+  .container{
+    max-width: 540px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .container{
+    max-width: 720px;
+  }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .container{
+    max-width: 960px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+.container{
+  max-width: 1140px;
+}
+}
