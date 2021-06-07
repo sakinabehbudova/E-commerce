@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 
 const StyledComponent = styled.header`
-  height: 350px;
-  width:250px;
+  height: 480px;
+  width:350px;
   background: url(${props=>props.image}) center/cover no-repeat;
-  margin-top:2rem
 `
 export default StyledComponent;

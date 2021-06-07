@@ -20,6 +20,9 @@ export default [
       memory: 128,
       operatingSystem:"IOS 13",
       featured: true,
+      guarantee:"1 year",
+      size:"147.3 x 71.2 x 9.4 mm",
+      weigth:"185gr",
       description:"iphone 12 mini 128Gb red",
         images: [
         {
@@ -51,6 +54,9 @@ export default [
       memory: 64,
       operatingSystem:"IOS 13",
       featured: false,
+      guarantee:"1 year",
+      size:"147.3 x 71.2 x 9.4 mm",
+      weigth:"195gr",
       description:"iphone 12 mini 64Gb blue",
           images: [
         {
@@ -80,8 +86,11 @@ export default [
       type: "single",
       price: 429.99,
       memory: 128,
-      operatingSystem:"IOS 13",
+      operatingSystem:"Android",
       featured: true,
+      guarantee:"1 year",
+      size:"147.3 x 71.2 x 9.4 mm",
+      weigth:"185gr",
       description:"samsung galaxy A12 128GB black",
             images: [
         {

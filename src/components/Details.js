@@ -13,7 +13,7 @@ export default class Details extends Component {
     });
     return (
       <Container>
-        <Row>
+        <Row className="details-row">
           <h1 className="title">Our Products</h1>
           {loading ? <Loading /> : phones}
         </Row>
