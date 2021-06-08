@@ -7,15 +7,24 @@ const PhoneProvider = ({ children }) => {
   const [sortedPhones, setSortedPhones] = useState([]);
   const [details, setDetails] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [name, setName] = useState([]);
+  const [price, setPrice] = useState(0);
+  const [minPrice, setMinPrice] = useState(0);
+  const [maxPrice, setMaxPrice] = useState(0);
 
   useEffect(() => {
     let phones = formatData(items);
     let featuredPhones = phones.filter((item) => item.featured === true);
+    let maxPrice = Math.max(...phones.map((item) => item.price));
+    let minPrice = Math.min(...phones.map((item) => item.price));
     setSortedPhones(featuredPhones);
     setLoading(false);
-    //  console.log(phones);
+    //    console.log("maxPrice",maxPrice);
+    //   console.log("minPrice",minPrice);
     setPhones(phones);
     getPhone();
+    setMaxPrice(maxPrice);
+    setMinPrice(minPrice);
   }, []);
 
   const formatData = (items) => {
@@ -40,4 +49,15 @@ const PhoneProvider = ({ children }) => {
   );
 };
 const Consumer = Context.Consumer;
+
+export function PhoneConsumer(Component) {
+  return function Consumer(props) {
+    return (
+      <Consumer>
+        {(value) => <Component {...props} context={value}></Component>}
+      </Consumer>
+    );
+  };
+}
+
 export { Context, PhoneProvider, Consumer };
